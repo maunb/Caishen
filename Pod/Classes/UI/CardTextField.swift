@@ -70,6 +70,8 @@ open class CardTextField: UITextField, NumberInputTextFieldDelegate {
         }
     }
     
+     open var cardTextFieldExtendDelegate: CardTextFieldExtendDelegate?
+    
     /**
      The string value that is used to separate the different groups of a card number in the text field.
      */
@@ -492,6 +494,10 @@ open class CardTextField: UITextField, NumberInputTextFieldDelegate {
                                              withValidationResult: result)
     }
     
+    public func numberInputShouldBeginEdit(_ numberInputTextField: NumberInputTextField) {
+        return cardTextFieldExtendDelegate?.cardTextFieldShoulBeginEdit()
+    }
+
     @objc open func numberInputTextFieldDidChangeText(_ numberInputTextField: NumberInputTextField) {
         showCardImage()
         notifyDelegate()

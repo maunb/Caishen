@@ -8,6 +8,10 @@
 
 import Foundation
 
+public protocol CardTextFieldExtendDelegate {
+    func cardTextFieldShoulBeginEdit() -> Bool
+}
+
 public protocol CardTextFieldDelegate {
     
     /**
