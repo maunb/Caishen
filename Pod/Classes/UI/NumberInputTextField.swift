@@ -88,6 +88,9 @@ open class NumberInputTextField: StylizedTextField {
     }
     
     // MARK: - UITextFieldDelegate
+    open override func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+          numberInputTextFieldDelegate?.numberInputShouldBeginEdit(self)
+    }
     
     open override func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Current text in text field, formatted and unformatted:

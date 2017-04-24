@@ -11,6 +11,8 @@
  */
 @objc
 public protocol NumberInputTextFieldDelegate {
+    
+    func numberInputShouldBeginEdit(_ numberInputTextField: NumberInputTextField)
     /**
      Called when the user entered a valid card number.
      
