@@ -495,7 +495,7 @@ open class CardTextField: UITextField, NumberInputTextFieldDelegate {
     }
     
     public func numberInputShouldBeginEdit(_ numberInputTextField: NumberInputTextField) {
-        return cardTextFieldExtendDelegate?.cardTextFieldShoulBeginEdit()
+         cardTextFieldExtendDelegate?.cardTextFieldShoulBeginEdit()
     }
 
     @objc open func numberInputTextFieldDidChangeText(_ numberInputTextField: NumberInputTextField) {
